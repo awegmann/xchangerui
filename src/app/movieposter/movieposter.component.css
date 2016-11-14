@@ -1,0 +1,16 @@
+div {
+    border: 1px solid #777;
+    padding: 2px;
+    margin: auto 2px;
+    text-align: center;
+    float: left;
+}
+
+div:hover {
+    border: 1px solid #ccc;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
