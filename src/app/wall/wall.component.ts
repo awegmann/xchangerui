@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {WallService} from "../wall.service";
+import {Component, OnInit, HostListener} from "@angular/core";
 import {Subscription} from "rxjs";
 import {Movie} from "../model/movie";
 
@@ -17,8 +16,6 @@ export class WallComponent implements OnInit {
         if (value > 60 && value < 400) {
             this._imageWith = value;
         }
-
-
     }
 
     private subsciption: Subscription;
@@ -42,7 +39,7 @@ export class WallComponent implements OnInit {
     ngOnInit() {
     }
 
-    onWallZoomChanged(event) {
+    @HostListener('wallZoomChanged', ['$event']) onWallZoomChanged(event) {
         console.log("size changed " + event);
         this.imageWith = event;
     }

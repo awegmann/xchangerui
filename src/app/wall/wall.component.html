@@ -1,5 +1,5 @@
-<xchg-resizer (wallZoomChanged)="onWallZoomChanged($event)"></xchg-resizer>
-
+<xchg-resizer></xchg-resizer>
+<!-- (wallZoomChanged)="onWallZoomChanged($event)" -->
 <div *ngFor="let movie of movies">
     <xchg-movieposter  [image]="movie.imageUrl" [imagewidth]="imageWith"></xchg-movieposter>
 </div>
